@@ -6,7 +6,14 @@ pipeline   {
                 echo '$GIT_BRANCH'
             }
         }
+        stage('Verify Branch') {
+            steps {
+                sh 'git checkout docker_branch'
+                echo 'workspace is $WORKSPACE'
+                echo '$GIT_BRANCH'
 
+            }
+        }
 
     }
 }
