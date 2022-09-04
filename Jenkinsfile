@@ -1,6 +1,6 @@
 pipeline   {
     agent any
-    stages {
+    stage {
         stage('Verify Branch') {
             steps {
                 echo '$GIT_BRANCH'
@@ -10,8 +10,6 @@ pipeline   {
             steps {
                 sh 'git checkout docker_branch'
                 echo 'workspace is $WORKSPACE'
-                echo '$GIT_BRANCH'
-
             }
         }
 
