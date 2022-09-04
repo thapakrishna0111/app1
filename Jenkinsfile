@@ -8,7 +8,6 @@ pipeline {
         }
         stage('Verify Workspace') {
             steps {
-                sh 'git checkout docker_branch'
                 echo 'workspace is $WORKSPACE'
             }
         }
