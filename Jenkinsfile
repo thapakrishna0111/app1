@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                scripts {
+                script {
                     docker.build registry + ":$BUILD_NUMBER"
                 }  
             }
