@@ -1,4 +1,10 @@
 pipeline {
+
+    environment {
+        registry = "kt0111/app1"
+        registryCredential = 'DockerHub'
+    }
+   
     agent any
     stages {
         stage('Verify Branch') {
@@ -6,14 +12,11 @@ pipeline {
                 echo '$GIT_BRANCH'
             }
         }
-        stage('Verify Workspace') {
+        stage('Build Image') {
             steps {
-                echo 'workspace is $WORKSPACE'
-                sh 'cd azure-vote/'
-                sh "'docker.withRegistry('https://registry.example.com', 'DockerHub') {
-                    def customImage = docker.build("kt0111/docker_app:${env.BUILD_ID}")
-                    customImage.push()
-                }'"
+                scripts {
+                    docker.build registry + ":$BUILD_NUMBER"
+                }  
             }
         }
     }
