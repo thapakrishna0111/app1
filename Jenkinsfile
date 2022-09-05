@@ -10,11 +10,10 @@ pipeline {
             steps {
                 echo 'workspace is $WORKSPACE'
                 sh 'cd azure-vote/'
-                sh '''docker.withRegistry('https://registry.example.com', 'DockerHub') {
+                docker.withRegistry('https://registry.example.com', 'DockerHub') {
                     def customImage = docker.build("kt0111/docker_app:${env.BUILD_ID}")
                     customImage.push()
                 }
-                '''
             }
         }
     }
