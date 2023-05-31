@@ -6,7 +6,7 @@ pipeline{
     stages{
       stage('git checkout'){
         steps{
-           git branch: 'main', url: 'https://github.com/koddas/app1.git'
+           git branch: 'main', url: 'https://github.com/thapakrishna0111/app1.git'
         }
       }
       stage('UNIT Testing'){
