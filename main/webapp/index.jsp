@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Boxfuse Sample App: success!</title>
+    <title>This is sample  App1 </title>
 </head>
 <body style="text-align: center">
 <h1>Congratulations!</h1>
