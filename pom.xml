@@ -4,8 +4,8 @@
     <groupId>com.boxfuse.samples</groupId>
     <artifactId>hello</artifactId>
     <packaging>war</packaging>
-    <version>1.0</version>
-    <name>hello</name>
+    <version></version>
+    <name>app1</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
     <dependencies>
         <dependency>
